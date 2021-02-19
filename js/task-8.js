@@ -84,3 +84,8 @@ const users = [
     age: 39,
   },
 ];
+
+const getUsersWithFriend = (users, friendName) => {
+  users.forEach((user) => user.friends.includes(friendName));
+  return getUsersWithFriend.push(user.name);
+};
