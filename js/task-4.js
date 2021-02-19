@@ -85,6 +85,6 @@ const users = [
   },
 ];
 
-const getInactiveUsers = users.filter((user) => !user.isActive);
+const getInactiveUsers = (users) => users.filter((user) => !user.isActive);
 
 console.log(getInactiveUsers(users));
