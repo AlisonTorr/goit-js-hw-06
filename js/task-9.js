@@ -86,7 +86,7 @@ const users = [
 ];
 
 const getNamesSortedByFriendsCount = (users) => {
-  users.sort(
+  [...users].sort(
     (prevUser, nextUser) => prevUser.friends.length - nextUser.friends.length
   );
   return user.name;
