@@ -87,8 +87,7 @@ const users = [
 
 const getSortedUniqueSkills = (users) => {
   for (const skill of user.skills) {
-    users.reduce((acc, skill) => acc.hasOwnProperty(skill), []);
-    return acc.sort();
+    users.reduce((acc, skill) => acc.hasOwnProperty(skill), []).sort();
   }
 };
 
