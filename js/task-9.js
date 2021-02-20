@@ -91,3 +91,5 @@ const getNamesSortedByFriendsCount = (users) => {
   );
   return user.name;
 };
+
+console.log(getNamesSortedByFriendsCount(users));
