@@ -86,8 +86,9 @@ const users = [
 ];
 
 const getUsersWithFriend = (users, friendName) => {
-  users.forEach((user) => user.friends.includes(friendName));
-  return user.name;
+  users
+    .forEach((user) => user.friends.includes(friendName))
+    .map((user) => user.name);
 };
 
 console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
