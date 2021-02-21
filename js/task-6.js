@@ -87,6 +87,7 @@ const users = [
 
 const getUsersWithAge = (users, min, max) => {
   users.filter((user) => user.age >= min && user.age <= max);
+  return user;
 };
 
 console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
