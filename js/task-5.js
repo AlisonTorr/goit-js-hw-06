@@ -86,8 +86,7 @@ const users = [
 ];
 
 const getUserWithEmail = (users, email) => {
-  users.find((user) => user.email === email);
-  return user;
+  return users.find((user) => user.email === email);
 };
 
 console.log(getUserWithEmail(users, "shereeanthony@kog.com")); // {объект пользователя Sheree Anthony}
