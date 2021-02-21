@@ -87,7 +87,7 @@ const users = [
 
 const getUsersWithFriend = (users, friendName) => {
   return users
-    .forEach((user) => user.friends.includes(friendName))
+    .filter((user) => user.friends.includes(friendName))
     .map((user) => user.name);
 };
 
