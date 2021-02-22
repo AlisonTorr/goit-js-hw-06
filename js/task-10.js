@@ -86,16 +86,15 @@ const users = [
 ];
 
 const getSortedUniqueSkills = (users) => {
-  return users
-    .forEach((user) => {
-      return user.skills;
-    })
-    .reduce((acc, skill) => {
-      if (!acc.includes(skill)) {
-        acc.push(skill);
-      }
-    }, [])
-    .sort();
+  return users.forEach((user) => {
+    return user.skills
+      .reduce((acc, skill) => {
+        if (!acc.includes(skill)) {
+          acc.push(skill);
+        }
+      }, [])
+      .sort();
+  });
 };
 
 console.log(getSortedUniqueSkills(users));
