@@ -87,8 +87,9 @@ const users = [
 
 const getSortedUniqueSkills = (users) => {
   return users
-    .forEach((user) => user.skills)
-
+    .forEach((user) => {
+      return user.skills;
+    })
     .reduce((acc, skill) => {
       if (!acc.includes(skill)) {
         acc.push(skill);
