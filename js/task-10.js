@@ -104,7 +104,7 @@ const users = [
 //   users.forEach((user) => {
 //     getAllSkills(user)
 //   });
- 
+
 // };
 
 const getAllSkills = (users) => {
@@ -112,10 +112,11 @@ const getAllSkills = (users) => {
     const allSkills = [];
     allSkills.push(user.skills);
     console.log(allSkills);
-    return allSkills.forEach(skills => {
+    return allSkills.forEach((skills) => {
       const allUserSkills = skills.flat();
-    console.log(allUserSkills);
+      console.log(allUserSkills);
     });
-}
+  });
+};
 
 // console.log(getSortedUniqueSkills(users));
