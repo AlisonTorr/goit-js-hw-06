@@ -115,6 +115,8 @@ const getAllSkills = (users) => {
     return allSkills.forEach((skills) => {
       const allUserSkills = skills.flat();
       console.log(allUserSkills);
+      const allUserAllSkills = allUserSkills.flat();
+      console.log(allUserAllSkills);
     });
   });
 };
