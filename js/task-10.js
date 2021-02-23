@@ -119,4 +119,6 @@ const getAllSkills = (users) => {
   });
 };
 
+console.log(getAllSkills(users));
+
 // console.log(getSortedUniqueSkills(users));
