@@ -90,7 +90,9 @@ const getSortedUniqueSkills = (users) => {
     const allSkills = [];
     allSkills.push(user.skills);
     console.log(allSkills);
-    return allSkills.reduce((acc, skill) => {
+    const allUserSkills = Array.from(...allSkills);
+    console.log(allUserSkills);
+    return allUserSkills.reduce((acc, skill) => {
       if (!acc.includes(skill)) {
         acc.push(skill);
       }
