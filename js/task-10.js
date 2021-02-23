@@ -89,13 +89,12 @@ const getSortedUniqueSkills = (users) => {
   return users.map((user) => {
     const allSkills = [];
     allSkills.push(user.skills);
-    return allSkills
-      .reduce((acc, skill) => {
-        if (!acc.includes(skill)) {
-          acc.push(skill);
-        }
-      }, [])
-      .sort();
+    console.log(allSkills);
+    return allSkills.reduce((acc, skill) => {
+      if (!acc.includes(skill)) {
+        acc.push(skill);
+      }
+    }, [].sort());
   });
 };
 
