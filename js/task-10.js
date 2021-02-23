@@ -90,8 +90,8 @@ const users = [
 //     const allSkills = [];
 //     allSkills.push(user.skills);
 //     console.log(allSkills);
-//     // const allUserSkills = allSkills.flat();
-//     // console.log(allUserSkills);
+//     const allUserSkills = allSkills.flat();
+//     console.log(allUserSkills);
 //     return allUserSkills.reduce((acc, skill) => {
 //       if (!acc.includes(skill)) {
 //         acc.push(skill);
@@ -100,14 +100,8 @@ const users = [
 //   });
 // };
 
-// const getAllUserSkills = (users) => {
-//   users.forEach((user) => {
-//     getAllSkills(user)
-//   });
-
-// };
-
 const getAllSkills = (users) => {
+  const result = [];
   users.map((user) => {
     const allSkills = [];
     allSkills.push(user.skills);
@@ -115,11 +109,22 @@ const getAllSkills = (users) => {
     return allSkills.forEach((skills) => {
       const allUserSkills = skills.flat();
       console.log(allUserSkills);
-      const allUsersSkills = allUserSkills.concat(skills);
-      console.log(allUsersSkills);
+      result.concat(allUserSkills);
+      return result.reduce((acc, skill) => {
+        if (!acc.includes(skill)) {
+          acc.push(skill);
+        }
+      }, [].sort());
     });
   });
 };
+
+// const allUsersSkills = (users) => {
+//   users.forEach((user) => {
+//     const result = getAllSkills(user);
+//     const totalReasult = result;
+//   })
+// }
 
 console.log(getAllSkills(users));
 
